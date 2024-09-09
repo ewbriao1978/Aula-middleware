@@ -4,10 +4,13 @@ const path = require('path')
 const app = express();
 
 // versão antiga
-const bodyParser = require('body-parser')
+//const bodyParser = require('body-parser')
 
-app.use(bodyParser.urlencoded({extended:false}))
-app.use(bodyParser.json())
+//app.use(bodyParser.urlencoded({extended:false}))
+//app.use(bodyParser.json())
+app.use(express.urlencoded({extended:false}))
+app.use(express.json())
+
 
  var hbs = handlebars.create({defaultLayout: 'main'});
   app.engine('handlebars', hbs.engine);
